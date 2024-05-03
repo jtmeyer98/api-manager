@@ -55,7 +55,7 @@ ROOT_URLCONF = 'api-manager.urls'
 
 TEMPLATES = [
     {
-        'api-managerEND': 'django.template.api-managerends.django.DjangoTemplates',
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'api-manager.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.api-managerends.sqlite3',
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
