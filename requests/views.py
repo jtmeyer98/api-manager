@@ -4,7 +4,7 @@ from .models import PurchaseRequest, RequestLine
 from .serializers import PurchaseRequestSerializer, RequestLineSerializer
 
 class PurchaseRequestViewSet(viewsets.ModelViewSet):
-    queryset = PurchaseRequest.objects.all()
+    queryset = PurchaseRequest.objects.all().prefetch_related('request_lines')
     serializer_class = PurchaseRequestSerializer
 
 class RequestLineViewSet(viewsets.ModelViewSet):
