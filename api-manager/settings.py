@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY') if os.environ.get('SECRET_KEY') else '
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true' if os.environ.get('DEBUG') else True
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(' ') if os.environ.get('ALLOWED_HOSTS') else []
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(' ') if os.environ.get('ALLOWED_HOSTS') else ['*']
 
 # Application definition
 
@@ -60,7 +60,7 @@ ROOT_URLCONF = 'api-manager.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'api-manager'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
