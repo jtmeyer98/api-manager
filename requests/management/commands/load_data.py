@@ -6,7 +6,6 @@ class Command(BaseCommand):
     help = 'Loads data from JSON into the database'
 
     def handle(self, *args, **kwargs):
-        # Load Purchase Requests
         with open('purchase_requests.json', 'r') as file:
             data = json.load(file)
             for item in data:
@@ -19,7 +18,6 @@ class Command(BaseCommand):
                 )
                 self.stdout.write(self.style.SUCCESS(f'Loaded PurchaseRequest {pr.id}'))
 
-        # Load Request Lines
         with open('request_lines.json', 'r') as file:
             data = json.load(file)
             for item in data:
