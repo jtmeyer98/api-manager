@@ -54,9 +54,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-# CORS_ALLOW_ALL_ORIGINS = True
-
-CORS_ALLOWED_ORIGINS = os.environ.get('CORS_ALLOWED_ORIGINS').split(',') if os.environ.get('CORS_ALLOWED_ORIGINS') else ["http://localhost:8080", "http://192.168.1.15:8080", "https://dashboard-kxki.onrender.com"]
+CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = 'api-manager.urls'
 
