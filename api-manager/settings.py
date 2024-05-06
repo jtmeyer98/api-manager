@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY') if os.environ.get('SECRET_KEY') else '
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true' if os.environ.get('DEBUG') else True
 
-ALLOWED_HOSTS = ['api-manager-x6lx.onrender.com','https://dashboard-kxki.onrender.com/']
+ALLOWED_HOSTS = ['api-manager-x6lx.onrender.com','https://dashboard-kxki.onrender.com/','127.0.0.1']
 
 # Application definition
 
