@@ -51,3 +51,9 @@ Se utilizó un archivo requirements.txt para denotar la versión de cada depende
 - **packaging**: Analiza y compara versiones de paquetes para la correcta gestión de dependencias.
 - **sqlparse**: Analiza y formatea sentencias SQL, útil para debugging y configuración de bases de datos.
 - **whitenoise**: Permite manejar archivos estáticos directamente desde Django.
+
+## Para levantar el ambiente localmente:
+
+1. Activar el entorno virtual: `pipenv shell`
+2. Levantar el ambiente: `python manage.py runserver`
+3. Entrar a la consola de django: `python manage.py shell`
