@@ -24,7 +24,17 @@ Las siguientes deciciones se tomaron asumiendo que las reglas de negocio no han 
 * No se puede crear un Request Line sin asignarle un Purchase Request
 * Se puede crear un Purchase Request con Request Lines vacíos
 
-### Render
+## Base de datos sqlite3
+Django permite usar una base de datos interna, sin la necesidad de utilizar una base de datos que implique confiraciones extra. Sqlite3 crea un archivo con las tablas de los modelos. Este archivo debe subirse al repositorio de github para que el servicio de despliegue tenga acceso a el en producción. Esta práctica es común para proyectos de desarrollo personal, pero no es recomendada para proyectos grandes con clientes reales, debido a que implica subir datos sensibles a un repositorio de la web.
+
+## Despliegue en Render
+Para el deploy de esta applicación se utilizó render, donde se configuraron las varibles de entorno:
+
+- ALLOWED_HOSTS = api-manager-x6lx.onrender.com,https://dashboard-kxki.onrender.com
+- CORS_ALLOW_ALL_ORIGINS = True
+- DEBUG = False
+- SECRET_KEY = (llave secreta con valor alfanumérico)
+- STATIC_URL = /static/
 
 ## Dependencias Utilizadas
 
