@@ -57,3 +57,15 @@ Se utilizó un archivo requirements.txt para denotar la versión de cada depende
 1. Activar el entorno virtual: `pipenv shell`
 2. Levantar el ambiente: `python manage.py runserver`
 3. Entrar a la consola de django: `python manage.py shell`
+
+## ¿Qué me gustaría agregarle a esta aplicación?
+
+- Pruebas Unitarias:
+    - Verificar la creación correcta de PurchaseRequest y RequestLine.
+    - Asegurar que los campos obligatorios como requester, description, product, y price no puedan ser nulos.
+    - Probar cualquier método personalizado en los modelos, como podría ser un método que calcula el total de una compra sumando las líneas de pedido asociadas.
+    - Validar que los serializers de PurchaseRequest y RequestLine serializan y deserializan correctamente los datos.
+
+- Pruebas de Integración:
+    - Probar la creación de un PurchaseRequest a través de la API y verificar que se persiste correctamente en la base de datos.
+    - Añadir RequestLine a un PurchaseRequest existente a través de la API y validar la relación y cálculos resultantes
